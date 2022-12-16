@@ -1,0 +1,11 @@
+.container {
+  margin-top: 20px;
+}
+.search{
+  background-color: rgba(164, 164, 226, 0.2);
+  max-width: 800px !important; 
+  border-radius: 15px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 10px;
+}
