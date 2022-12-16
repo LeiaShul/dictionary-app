@@ -1,10 +1,17 @@
+import React from 'react';
 import './App.css';
+import Dictionary from './Dictionary'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-      </header>
+      <div className='container'>
+        <Dictionary />
+      </div>
+      <footer className="text-center text-muted font-monospace" >
+        This project was coded by Lesia Shulezhko and is <a className="link" href="https://github.com/LeiaShul/dictionary-app" target="_blank" rel="noreferrer">open-sourced on GitHub</a>
+      </footer>
     </div>
   );
 }
