@@ -1,11 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@100;300;500&display=swap');
+
+:root {
+  --primary-color: rgba(164, 164, 226, 0.2);
+  --secondary-color: rgba(164, 164, 226, 0.6);
+  --dark-color: rgb(73, 73, 99);
+}
+body {
+  background-color: var(--primary-color) !important;
+}
 .container {
   margin-top: 20px;
 }
 .search{
-  background-color: rgba(164, 164, 226, 0.2);
+  background-color: white;
   max-width: 800px !important; 
   border-radius: 15px;
   margin-top: 20px;
   margin-bottom: 20px;
   padding: 10px;
+}
+.guestion {
+  font-size: 20px;
+  font-family: 'Chivo Mono', monospace;
+  font-weight: 500;
+  color: var(--dark-color);
+  margin: 20px 0 10px 15px;
+
+}
+.example{
+  font-family: 'Chivo Mono', monospace;
+  font-weight: 100;
+  color: white;
+}
+.header {
+  text-transform: uppercase;
+  font-family: 'Chivo Mono', monospace;
+  font-weight: 300;
+  color: var(--dark-color);
+}
+.search-button{
+  color: var(--dark-color);
+  border: 1px solid var(--dark-color);
+  padding:  0.5rem 1rem 0.5rem 1rem;
+  border-radius: 0.5rem;
+  background-color: white;
+  font-size: 1.25rem;
+  margin-right: 5px;
+  transition: 
+  background-color .15s ease-in-out,
+  border-color .15s ease-in-out,
+  box-shadow .15s ease-in-out,
+  color .15s ease-in-out;
+}
+
+.search-button:hover {
+  background-color: var(--dark-color);
+  color: white;
+  border-color: white;
+}
+.form-control{
+  border-color: var(--dark-color) !important;
+}
+.link{
+  color: var(--dark-color);
 }

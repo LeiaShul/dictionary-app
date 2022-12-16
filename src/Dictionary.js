@@ -37,17 +37,17 @@ export default function Dictionary(props) {
         return (
             <div className="dictionary">
                 <header className="text-center">
-                    <h1 className="display-3">Dictionary</h1>
+                    <h1 className="header">Dictionary</h1>
                 </header>
                 <div className="container search">
                     <form onSubmit={handleSubmit}>
-                        <label className="m-3 display-5 fs-2">What word do you want to look up?</label>
-                        <div className="row">
+                        <label className="guestion">What word do you want to look up?</label>
+                        <div className="row pe-3">
                             <div className="col-11">
-                                <input onChange={handleKeywordChange} className="form-control mx-2" type="search"></input>
+                                <input onChange={handleKeywordChange} className="form-control form-control-lg mx-2" type="search"></input>
                             </div>
-                            <div className="col">
-                                <button type="submit" className="btn btn-outline-light mx-0">
+                            <div className="col-1">
+                                <button type="submit" className="search-button">
                                     <FontAwesomeIcon icon={faMagnifyingGlass} />
                                 </button>
                             </div>
