@@ -20,7 +20,6 @@ export default function Dictionary(props) {
     }
     
     function handleResponse(response) {
-      //  console.log(response.data[0]);
         setDefinition(response.data[0]);      
     }
 
@@ -42,9 +41,9 @@ export default function Dictionary(props) {
                 <div className="container search">
                     <form onSubmit={handleSubmit}>
                         <label className="guestion">What word do you want to look up?</label>
-                        <div className="row pe-3">
+                        <div className="row p-3">
                             <div className="col-11">
-                                <input onChange={handleKeywordChange} className="form-control form-control-lg mx-2" type="search"></input>
+                                <input onChange={handleKeywordChange} defaultValue={props.defaultKeyword} className="form-control form-control-lg" type="search"></input>
                             </div>
                             <div className="col-1">
                                 <button type="submit" className="search-button">
