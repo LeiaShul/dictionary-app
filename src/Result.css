@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Chivo+Mono:ital,wght@0,100;0,300;0,700;1,100&display=swap');
+
+:root {
+    --primary-color: rgba(164, 164, 226, 0.2);
+    --secondary-color: rgba(164, 164, 226, 0.6);
+    --dark-color: rgb(73, 73, 99);
+    --primary-font: 'Chivo Mono', monospace;
+}
+
+h2, h3, h4{
+    font-family: var(--primary-font);
+    font-weight: 300;
+}
+.meaning {
+    font-family: var(--primary-font);
+    font-weight: 100;
+}
+
+.italic {
+    font-family: var(--primary-font);
+    font-style: italic;
+    font-size: 14px;
+}
