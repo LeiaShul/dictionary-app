@@ -9,7 +9,7 @@ function App() {
       <div className='container'>
         <Dictionary defaultKeyword="flower"/>
       </div>
-      <footer className="text-center text-muted" >
+      <footer className="text-center text-muted pb-3" >
         This project was coded by Lesia Shulezhko and is <a className="link" href="https://github.com/LeiaShul/dictionary-app" target="_blank" rel="noreferrer">open-sourced on GitHub</a>
       </footer>
     </div>

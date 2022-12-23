@@ -42,7 +42,7 @@ export default function Dictionary(props) {
                     <form onSubmit={handleSubmit}>
                         <label className="question">What word do you want to look up?</label>
                         <div className="row p-2">
-                            <div className="col-11 p-0">
+                            <div className="col-md-11 col-10 p-0">
                                 <input onChange={handleKeywordChange} defaultValue={props.defaultKeyword} className="form-control form-control-lg" type="search"></input>
                             </div>
                             <div className="col-1 px-1">
