@@ -9,6 +9,9 @@
 body {
   background-color: var(--primary-color) !important;
 }
+footer {
+  font-family: var(--primary-font);
+}
 .container {
   margin-top: 20px;
 }
