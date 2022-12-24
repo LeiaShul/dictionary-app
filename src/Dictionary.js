@@ -4,11 +4,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 
 import Result from "./Result";
+import Photos from "./Photos";
 
 export default function Dictionary(props) {
     const [keyword, setKeyword] = useState(props.defaultKeyword);
     const [definition, setDefinition] = useState(null);
     const [loaded, setLoaded] = useState(false);
+    const [photos, setPhotos] = useState([]);
 
     function search() {
         let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en_US/${keyword}`;
@@ -18,9 +20,17 @@ export default function Dictionary(props) {
         setLoaded(true);
         search();
     }
+    function handleImages(response) {
+        setPhotos(response.data.photos);
+    }
     
     function handleResponse(response) {
-        setDefinition(response.data[0]);      
+        setDefinition(response.data[0]); 
+        let apiKey = "563492ad6f917000010000017a0500f8b90845ccacee7a69e76f7ef1"        
+        let apiUrl = `https://api.pexels.com/v1/search?query=${response.data[0].word}&per_page=9`;
+        axios
+            .get(apiUrl, { headers: { Authorization: `Bearer ${apiKey}` } })
+            .then(handleImages);
     }
 
     function handleSubmit(event) {
@@ -38,7 +48,7 @@ export default function Dictionary(props) {
                 <header className="text-center">
                     <h1 className="header">Dictionary</h1>
                 </header>
-                <div className="container search p-4">
+                <div className="container shadow search p-4">
                     <form onSubmit={handleSubmit}>
                         <label className="question">What word do you want to look up?</label>
                         <div className="row p-2">
@@ -57,6 +67,7 @@ export default function Dictionary(props) {
                     </form>
                 </div> 
                 <Result definition={definition} />
+                <Photos photos={photos} />
             </div>
         )
     }

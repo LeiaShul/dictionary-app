@@ -7,7 +7,7 @@ export default function Result(props) {
     if (props.definition) {
         return (
             <div className="result">
-                <div className="container search p-4">
+                <div className="container search p-4 shadow">
                     <h2 className="text-capitalize">{props.definition.word}</h2>
                     {props.definition.phonetics.map(function (phonetic, index1) {
                         return <Phonetic key={index1} phonetic={phonetic} />
